@@ -1,0 +1,44 @@
+
+
+.body {
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    transition: scale .2s linear;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    img {
+        width: 100%;
+    }
+
+    &:hover {
+        scale: 0.97;
+    }
+}
+
+.cardContent {
+    p {
+        font-size: 15px;
+        line-height: 17px;
+        color: #fff;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 37px;
+    }
+}
+
+.features {
+    span {
+        font-weight: 300;
+    }
+    button {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
