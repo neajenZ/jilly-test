@@ -28,9 +28,11 @@ const BeanList = () => {
 
         return () => {
             if (loader.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observerRef.current!.unobserve(loader.current);
             }
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

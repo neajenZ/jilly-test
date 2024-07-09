@@ -1,7 +1,6 @@
 import {createContext, Dispatch, useRef, ReactNode, SetStateAction, useMemo, useState, useCallback} from "react";
 import { IBean } from "../../components/beanList/beanCard/beanCard.interface";
 import { apiRequests } from "../api/api";
-import { useLatest } from "../hooks/useLatest";
 
 interface IContext {
     beans: IBean[],
