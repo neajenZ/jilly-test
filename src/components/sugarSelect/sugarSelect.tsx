@@ -1,6 +1,6 @@
-import {useContext, useState} from "react";
+import { useContext, useState } from "react";
 import Select, { IItem } from "../../shared/ui/select/select";
-import {BeansContext} from "../../shared/store/context";
+import { BeansContext } from "../../shared/store/context";
 
 
 const values: IItem[] = [
@@ -16,13 +16,17 @@ const values: IItem[] = [
 
 const SugarSelect = () => {
     const [selected, setSelected] = useState<IItem>(values[0])
-    const {handleFilterClick} = useContext(BeansContext)
+    const { handleFilterClick } = useContext(BeansContext)
     return (
         <>
-            <Select label="Sugar" options={values} handleClick={(val) => {
-                setSelected(val)
-                handleFilterClick('sugarFree',`${val.key}`)
-            }} defaultValue={selected} />
+            <Select
+                label="Sugar"
+                options={values}
+                handleClick={(val) => {
+                    setSelected(val)
+                    handleFilterClick('sugarFree', `${val.key}`)
+                }}
+                defaultValue={selected} />
         </>
     )
 };

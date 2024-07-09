@@ -20,13 +20,17 @@ const values: IItem[] = [
 
 const FlavorSelect = () => {
     const [selected, setSelected] = useState<IItem>(values[0])
-    const {handleFilterClick} = useContext(BeansContext)
+    const { handleFilterClick } = useContext(BeansContext)
     return (
         <>
-            <Select label="Flavor" options={values} handleClick={(val) => {
-                setSelected(val)
-                handleFilterClick('flavorName', val.value)
-                }} defaultValue={selected} />
+            <Select
+                label="Flavor"
+                options={values}
+                handleClick={(val) => {
+                    setSelected(val)
+                    handleFilterClick('flavorName', val.value)
+                }}
+                defaultValue={selected} />
         </>
     )
 };
