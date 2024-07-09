@@ -1,4 +1,4 @@
-import { memo, useContext } from "react";
+import { memo } from "react";
 import { IBean } from "./beanCard.interface";
 import styles from './beanCard.module.scss'
 

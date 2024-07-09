@@ -2,7 +2,6 @@ import { ElementRef, useRef, useEffect, useContext } from 'react';
 import styles from './beanList.module.scss'
 import BeanCard from './beanCard/beanCard';
 import { BeansContext } from '../../shared/store/context';
-import { useLocation } from 'react-router-dom';
 import Header from '../header/header';
 
 
@@ -10,7 +9,6 @@ const BeanList = () => {
     const { beans, getData, search, isLoading } = useContext(BeansContext)
     const loader = useRef<ElementRef<'div'>>(null);
     const observerRef = useRef<IntersectionObserver | null>(null);
-    const location = useLocation()
 
     useEffect(() => {
         if (search) return;

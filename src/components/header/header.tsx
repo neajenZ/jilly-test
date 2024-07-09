@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import SugarSelect from "../sugarSelect/sugarSelect";
 import FlavorSelect from "../flavorSelect/flavorSelect";
 import styles from './header.module.scss'

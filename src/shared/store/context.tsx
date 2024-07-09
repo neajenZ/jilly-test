@@ -1,5 +1,4 @@
-import {createContext, Dispatch, useRef, ReactNode, SetStateAction, useEffect, useMemo, useState, useCallback} from "react";
-import {useLocation, useParams, useSearchParams} from "react-router-dom";
+import {createContext, Dispatch, useRef, ReactNode, SetStateAction, useMemo, useState, useCallback} from "react";
 import { IBean } from "../../components/beanList/beanCard/beanCard.interface";
 import { apiRequests } from "../api/api";
 import { useLatest } from "../hooks/useLatest";
@@ -24,7 +23,6 @@ const BeansProvider = ({ children }: IProps) => {
     const [beans, setBeans] = useState<IBean[]>([])    
     const search = useRef(false)
     const pageRef = useRef(1)
-    const loading = useLatest(isLoading)
 
     const getData = useCallback(async () => {
         if (search.current) return;
